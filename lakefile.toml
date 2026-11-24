@@ -1,0 +1,19 @@
+name = "SteinerProof"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["SteinerProof"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+weak.linter.style.longLine = false
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.37.0-rc1"
+
+[[lean_lib]]
+name = "SteinerProof"
