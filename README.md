@@ -1,10 +1,10 @@
 # Extended Parallel Bodies and a Steiner Formula for Planar PL Sets
 
-**Author:** [Full name]
+**Author:** Joseph T. Previdi 
 
-**GitHub repository:** [GitHub URL]
+**GitHub repository:** [[GitHub URL]](https://github.com/jprevidi/Extended-Steiner-Formula)
 
-**Archived publication:** [Zenodo DOI]
+**Archived publication:** Zenodo DOI TBA
 
 ## Overview
 
