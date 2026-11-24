@@ -1,0 +1,32 @@
+﻿FinitePlanarComplex.planarExtendedSteinerFormula (h : FinitePlanarComplex.OrdinaryPlanarSteiner)
+  (A : FinitePlanarComplex) (hA : A.realization.Nonempty) :
+  ∃ R,
+    0 < R ∧
+      ∀ (r : ℝ),
+        0 < r →
+          r < R →
+            (MeasureTheory.volume (extendedBody A.realization r)).toReal =
+              (MeasureTheory.volume A.realization).toReal + r * A.twiceV1 + Real.pi * r ^ 2 * ↑A.eulerChar
+structure FinitePlanarComplex.OrdinaryPlanarSteiner : Prop
+number of parameters: 0
+fields:
+  FinitePlanarComplex.OrdinaryPlanarSteiner.convexOffset : ∀ (C : FinitePlanarComplex),
+      C.realization.Nonempty → Convex ℝ C.realization → ∀ (r : ℝ), 0 ≤ r → C.ConvexOffsetFormulaAt r
+  FinitePlanarComplex.OrdinaryPlanarSteiner.triangleOffset : ∀ (C : FinitePlanarComplex),
+      ∀ s ∈ C.triangles, FinitePlanarComplex.TriangleOffsetFormula s
+constructor:
+  FinitePlanarComplex.OrdinaryPlanarSteiner.mk
+    (convexOffset :
+      ∀ (C : FinitePlanarComplex),
+        C.realization.Nonempty → Convex ℝ C.realization → ∀ (r : ℝ), 0 ≤ r → C.ConvexOffsetFormulaAt r)
+    (triangleOffset : ∀ (C : FinitePlanarComplex), ∀ s ∈ C.triangles, FinitePlanarComplex.TriangleOffsetFormula s) :
+    FinitePlanarComplex.OrdinaryPlanarSteiner
+def FinitePlanarComplex.ConvexOffsetFormulaAt : FinitePlanarComplex → ℝ → Prop :=
+fun C r => (MeasureTheory.volume (offset C.realization r)).toReal = C.steinerPolynomial r
+def FinitePlanarComplex.TriangleOffsetFormula : Finset PLPoint → Prop :=
+fun s =>
+  ∀ (r : ℝ),
+    0 ≤ r →
+      (MeasureTheory.volume (offset ((convexHull ℝ) ↑s) r)).toReal =
+        FinitePlanarComplex.triangleArea s + r * FinitePlanarComplex.trianglePerimeter s + Real.pi * r ^ 2
+'FinitePlanarComplex.planarExtendedSteinerFormula' depends on axioms: [propext, Classical.choice, Quot.sound]
