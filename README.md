@@ -4,7 +4,7 @@
 
 **GitHub repository:** [[GitHub URL]](https://github.com/jprevidi/Extended-Steiner-Formula)
 
-**Archived publication:** Zenodo DOI TBA
+**Archived publication:** 10.5281/zenodo.24492788
 
 ## Overview
 
