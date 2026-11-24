@@ -242,3 +242,15 @@ theorem planarExtendedSteinerFormula (h : OrdinaryPlanarSteiner)
       hFormula r hr hrR⟩
 
 end FinitePlanarComplex
+
+-- Main theorem and explicit hypotheses
+#check FinitePlanarComplex.planarExtendedSteinerFormula
+
+-- Contents of the background hypothesis
+#print FinitePlanarComplex.OrdinaryPlanarSteiner
+#print FinitePlanarComplex.ConvexOffsetFormulaAt
+#print FinitePlanarComplex.TriangleOffsetFormula
+
+-- Foundational axiom dependencies
+#print axioms FinitePlanarComplex.planarExtendedSteinerFormula
+
