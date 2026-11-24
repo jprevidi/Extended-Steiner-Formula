@@ -2,9 +2,9 @@
 
 **Author:** Joseph T. Previdi 
 
-**GitHub repository:** [[GitHub URL]](https://github.com/jprevidi/Extended-Steiner-Formula)
+**GitHub repository:** [Extended-Steiner-Formula](https://github.com/jprevidi/Extended-Steiner-Formula)
 
-**Archived publication:** 10.5281/zenodo.24492788
+**Archived publication:** [10.5281/zenodo.24492788](https://doi.org/10.5281/zenodo.24492788)
 
 ## Overview
 
